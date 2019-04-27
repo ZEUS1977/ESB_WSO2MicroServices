@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="LoginEndPoint" groupId="com.example.WSO2MicroServiceConfig.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/LoginEndPoint.xml</file>
+    </artifact>
+    <artifact name="LoginAPI" groupId="com.example.WSO2MicroServiceConfig.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/LoginAPI.xml</file>
+    </artifact>
+    <artifact name="login" groupId="com.example.WSO2MicroServiceConfig.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/login.xml</file>
+    </artifact>
+</artifacts>

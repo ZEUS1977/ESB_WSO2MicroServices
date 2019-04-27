@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/api" name="LoginAPI" xmlns="http://ws.apache.org/ns/synapse">
+  <resource methods="GET" protocol="http">
+    <inSequence>
+      <log>
+        <property expression="$ctx:query.param.id" name="id"/>
+        <property expression="$ctx:query.param.password" name="password"/>
+      </log>
+      <property expression="$ctx:query.param.id"
+        name="uri.var.service.id" scope="default" type="STRING"/>
+      <property expression="$ctx:query.param.password"
+        name="uri.var.service.password" scope="default" type="STRING"/>
+      <send>
+        <endpoint key="LoginEndPoint"/>
+      </send>
+    </inSequence>
+    <outSequence>
+      <send/>
+    </outSequence>
+    <faultSequence>
+      <send/>
+    </faultSequence>
+  </resource>
+</api>
